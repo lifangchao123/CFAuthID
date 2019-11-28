@@ -31,16 +31,39 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initialize];
+}
 
-//    UIWindow *window = nil;
-//    if (@available(iOS 13.0, *)) {
-//        for (UIWindowScene *windowSence in [UIApplication sharedApplication].connectedScenes) {
-//            window = windowSence.windows.firstObject;
-//            break;
-//        }
-//    } else {
-//        window = [UIApplication sharedApplication].delegate.window;
-//    }
+/**
+ * 获取KeyWindow
+ */
+- (UIWindow *)getKeyWindow {
+    UIWindow *window = nil;
+    if (@available(iOS 13.0, *)) {
+        for (UIWindowScene *windowSence in [UIApplication sharedApplication].connectedScenes) {
+            window = windowSence.windows.firstObject;
+            break;
+        }
+    } else {
+        window = [UIApplication sharedApplication].delegate.window;
+    }
+    return window;
+}
+
+/**
+* 判断是否是iPhoneX以上版本
+*/
+- (BOOL)isHighIphoneX {
+    BOOL tmp = NO;
+    if (@available(iOS 11.0, *)) {
+        if ([self getKeyWindow].safeAreaInsets.bottom > 0) {
+            tmp = YES;
+        } else {
+            tmp = NO;
+        }
+    } else {
+        tmp = NO;
+    }
+    return tmp;
 }
 
 #pragma mark - 初始化方法
@@ -61,6 +84,12 @@
     
     // 开始认证
     [self authVerification];
+    
+    if ([self isHighIphoneX]) {
+        NSLog(@"iPhone以上版本");
+    } else {
+        NSLog(@"iPhone以下版本");
+    }
 }
 
 #pragma mark - 懒加载各组件
