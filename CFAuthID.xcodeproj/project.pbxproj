@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB07290A238E61FB00CD6953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB072909238E61FB00CD6953 /* AppDelegate.m */; };
-		BB07290D238E61FB00CD6953 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB07290C238E61FB00CD6953 /* SceneDelegate.m */; };
 		BB072910238E61FB00CD6953 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB07290F238E61FB00CD6953 /* ViewController.m */; };
-		BB072913238E61FB00CD6953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB072911238E61FB00CD6953 /* Main.storyboard */; };
 		BB072915238E61FC00CD6953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB072914238E61FC00CD6953 /* Assets.xcassets */; };
 		BB072918238E61FC00CD6953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB072916238E61FC00CD6953 /* LaunchScreen.storyboard */; };
 		BB07291B238E61FC00CD6953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB07291A238E61FC00CD6953 /* main.m */; };
@@ -40,11 +38,8 @@
 		BB072905238E61FB00CD6953 /* CFAuthID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFAuthID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB072908238E61FB00CD6953 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB072909238E61FB00CD6953 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BB07290B238E61FB00CD6953 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		BB07290C238E61FB00CD6953 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		BB07290E238E61FB00CD6953 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BB07290F238E61FB00CD6953 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BB072912238E61FB00CD6953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB072914238E61FC00CD6953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB072917238E61FC00CD6953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB072919238E61FC00CD6953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,11 +107,8 @@
 				BB072940238E657500CD6953 /* CFAuthID.m */,
 				BB072908238E61FB00CD6953 /* AppDelegate.h */,
 				BB072909238E61FB00CD6953 /* AppDelegate.m */,
-				BB07290B238E61FB00CD6953 /* SceneDelegate.h */,
-				BB07290C238E61FB00CD6953 /* SceneDelegate.m */,
 				BB07290E238E61FB00CD6953 /* ViewController.h */,
 				BB07290F238E61FB00CD6953 /* ViewController.m */,
-				BB072911238E61FB00CD6953 /* Main.storyboard */,
 				BB072914238E61FC00CD6953 /* Assets.xcassets */,
 				BB072916238E61FC00CD6953 /* LaunchScreen.storyboard */,
 				BB072919238E61FC00CD6953 /* Info.plist */,
@@ -249,7 +241,6 @@
 			files = (
 				BB072918238E61FC00CD6953 /* LaunchScreen.storyboard in Resources */,
 				BB072915238E61FC00CD6953 /* Assets.xcassets in Resources */,
-				BB072913238E61FB00CD6953 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +269,6 @@
 				BB07290A238E61FB00CD6953 /* AppDelegate.m in Sources */,
 				BB072941238E657500CD6953 /* CFAuthID.m in Sources */,
 				BB07291B238E61FC00CD6953 /* main.m in Sources */,
-				BB07290D238E61FB00CD6953 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,14 +304,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BB072911238E61FB00CD6953 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB072912238E61FB00CD6953 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BB072916238E61FC00CD6953 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -383,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -435,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -448,15 +430,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 654AYUGXTZ;
+				DEVELOPMENT_TEAM = HDBYH8T9V6;
 				INFOPLIST_FILE = CFAuthID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ryx.rfcredit.resh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamchaser.CFAuthID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,15 +447,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 654AYUGXTZ;
+				DEVELOPMENT_TEAM = HDBYH8T9V6;
 				INFOPLIST_FILE = CFAuthID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ryx.rfcredit.resh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamchaser.CFAuthID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
