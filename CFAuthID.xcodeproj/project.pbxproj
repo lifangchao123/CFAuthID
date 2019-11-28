@@ -16,6 +16,7 @@
 		BB07291B238E61FC00CD6953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB07291A238E61FC00CD6953 /* main.m */; };
 		BB072925238E61FC00CD6953 /* CFAuthIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB072924238E61FC00CD6953 /* CFAuthIDTests.m */; };
 		BB072930238E61FC00CD6953 /* CFAuthIDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB07292F238E61FC00CD6953 /* CFAuthIDUITests.m */; };
+		BB072941238E657500CD6953 /* CFAuthID.m in Sources */ = {isa = PBXBuildFile; fileRef = BB072940238E657500CD6953 /* CFAuthID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		BB07292B238E61FC00CD6953 /* CFAuthIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFAuthIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB07292F238E61FC00CD6953 /* CFAuthIDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFAuthIDUITests.m; sourceTree = "<group>"; };
 		BB072931238E61FC00CD6953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB07293D238E634300CD6953 /* CommonHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonHeaders.h; sourceTree = "<group>"; };
+		BB07293F238E657500CD6953 /* CFAuthID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFAuthID.h; sourceTree = "<group>"; };
+		BB072940238E657500CD6953 /* CFAuthID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFAuthID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		BB072907238E61FB00CD6953 /* CFAuthID */ = {
 			isa = PBXGroup;
 			children = (
+				BB07293F238E657500CD6953 /* CFAuthID.h */,
+				BB072940238E657500CD6953 /* CFAuthID.m */,
 				BB072908238E61FB00CD6953 /* AppDelegate.h */,
 				BB072909238E61FB00CD6953 /* AppDelegate.m */,
 				BB07290B238E61FB00CD6953 /* SceneDelegate.h */,
@@ -115,6 +121,7 @@
 				BB072916238E61FC00CD6953 /* LaunchScreen.storyboard */,
 				BB072919238E61FC00CD6953 /* Info.plist */,
 				BB07291A238E61FC00CD6953 /* main.m */,
+				BB07293D238E634300CD6953 /* CommonHeaders.h */,
 			);
 			path = CFAuthID;
 			sourceTree = "<group>";
@@ -269,6 +276,7 @@
 			files = (
 				BB072910238E61FB00CD6953 /* ViewController.m in Sources */,
 				BB07290A238E61FB00CD6953 /* AppDelegate.m in Sources */,
+				BB072941238E657500CD6953 /* CFAuthID.m in Sources */,
 				BB07291B238E61FC00CD6953 /* main.m in Sources */,
 				BB07290D238E61FB00CD6953 /* SceneDelegate.m in Sources */,
 			);
@@ -440,13 +448,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HDBYH8T9V6;
+				DEVELOPMENT_TEAM = 654AYUGXTZ;
 				INFOPLIST_FILE = CFAuthID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dreamchaser.CFAuthID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryx.rfcredit.resh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,13 +465,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HDBYH8T9V6;
+				DEVELOPMENT_TEAM = 654AYUGXTZ;
 				INFOPLIST_FILE = CFAuthID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dreamchaser.CFAuthID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryx.rfcredit.resh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
