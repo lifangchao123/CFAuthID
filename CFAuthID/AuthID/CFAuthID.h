@@ -81,7 +81,21 @@ typedef void (^CFAuthIDStateBlock)(CFAuthIDState state, NSError * __nullable err
  * @param describe TouchID/FaceID显示的描述
  * @param block 回调状态的block
  */
-- (void)cf_showAuthIDWithDescribe:(NSString * __nullable)describe block:(CFAuthIDStateBlock)block;
++ (void)cf_showAuthIDWithDescribe:(NSString * __nullable)describe block:(CFAuthIDStateBlock)block;
+
+/**
+ * 启动TouchID验证
+ * @param describe TouchID显示的描述
+ * @param block 回调状态的block
+ */
++ (void)cf_showTouchIDWithDescribe:(NSString * __nullable)describe block:(CFAuthIDStateBlock)block;
+
+/**
+ * 启动FaceID验证
+ * @param describe FaceID显示的描述
+ * @param block 回调状态的block
+ */
++ (void)cf_showFaceIDWithDescribe:(NSString * __nullable)describe block:(CFAuthIDStateBlock)block;
 
 @end
 

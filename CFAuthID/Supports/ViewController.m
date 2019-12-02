@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "CommonHeaders.h"
-#import "CFAuthID.h"
 
 @interface ViewController ()
 
@@ -18,8 +17,6 @@
 
 @property (nonatomic, copy) NSString *authImage;            // 认证图标名
 @property (nonatomic, copy) NSString *authName;             // 认证名称
-
-@property (nonatomic, strong) CFAuthID *authID;
 
 @end
 
@@ -33,43 +30,10 @@
     [self initialize];
 }
 
-/**
- * 获取KeyWindow
- */
-- (UIWindow *)getKeyWindow {
-    UIWindow *window = nil;
-    if (@available(iOS 13.0, *)) {
-        for (UIWindowScene *windowSence in [UIApplication sharedApplication].connectedScenes) {
-            window = windowSence.windows.firstObject;
-            break;
-        }
-    } else {
-        window = [UIApplication sharedApplication].delegate.window;
-    }
-    return window;
-}
-
-/**
-* 判断是否是iPhoneX以上版本
-*/
-- (BOOL)isHighIphoneX {
-    BOOL tmp = NO;
-    if (@available(iOS 11.0, *)) {
-        if ([self getKeyWindow].safeAreaInsets.bottom > 0) {
-            tmp = YES;
-        } else {
-            tmp = NO;
-        }
-    } else {
-        tmp = NO;
-    }
-    return tmp;
-}
-
 #pragma mark - 初始化方法
 - (void)initialize {
     // 设置值
-    if (iPhoneX || iPhoneXR || iPhoneXMAX) {
+    if ([CFToolManager getIsHighIphoneX]) {
         self.authImage = @"auth_face";
         self.authName = @"面容";
     } else {
@@ -85,7 +49,7 @@
     // 开始认证
     [self authVerification];
     
-    if ([self isHighIphoneX]) {
+    if ([CFToolManager getIsHighIphoneX]) {
         NSLog(@"iPhone以上版本");
     } else {
         NSLog(@"iPhone以下版本");
@@ -129,13 +93,6 @@
     return _actionBtn;
 }
 
-- (CFAuthID *)authID {
-    if (!_authID) {
-        _authID = [[CFAuthID alloc] init];
-    }
-    return _authID;
-}
-
 #pragma mark - 按钮点击事件
 - (void)btnClicked:(UIButton *)sender {
     // 唤起指纹、面容ID验证
@@ -145,7 +102,7 @@
 #pragma mark - 验证TouchID/FaceID
 - (void)authVerification {
     
-    [self.authID cf_showAuthIDWithDescribe:nil block:^(CFAuthIDState state, NSError *error) {
+    [CFAuthID cf_showAuthIDWithDescribe:nil block:^(CFAuthIDState state, NSError *error) {
         
         if (state == CFAuthIDStateNotSupport) { // 不支持TouchID/FaceID
             NSLog(@"对不起，当前设备不支持指纹/面容ID");
